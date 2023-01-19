@@ -4,10 +4,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Game rows={20} columns={20}></Game>
+      <Game rows={20} columns={10}></Game>
     </div>
     
   );
 }
 
 export default App;
+

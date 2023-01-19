@@ -15,7 +15,26 @@
 }
 
 .Tetris {
-  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
+
+.Game {
+  display: flex;
+  justify-content: center;
+}
+
+.Board {
+  margin: 2em auto;
+  display: grid;
+  grid-gap: 2px;
+  width: 20vw;
+  height: 40vw;
+  background: black;
+  border: 10px solid black;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .BoardCell {
@@ -31,13 +50,85 @@
   border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
 
-.Sparkle {
+.tetromino_ghost {
+  opacity: 0;
+}
+
+.tetromino_i {
+  background-color: rgba(80, 227, 230, 1);
+}
+
+.tetromino_j {
+  background-color: rgba(36, 95, 223, 1);
+}
+
+.tetromino_l {
+  background-color: rgba(223, 173, 36, 1);
+}
+
+.tetromino_o {
+  background-color: rgba(223, 217, 36, 1);
+}
+
+.tetromino_s {
+  background-color: rgba(48, 211, 56, 1);
+}
+
+.tetromino_t {
+  background-color: rgba(132, 61, 198, 1);
+}
+
+.tetromino_z {
+  background-color: rgba(227, 78, 78, 1);
+}
+
+.GameStats {
+  margin-top: 260px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: OCR A;
+  list-style-type: none;
+  color: black;
+  padding: 0;
+}
+
+.GameStats__right {
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.GameStats .value {
+  font-size: 2em;
+  font-family: OCR A;
+  color: black;
+}
+
+.Previews {
+  margin-top: 30.5px;
+  margin-left: 10px;
+  height: 400px;
+}
+
+.Preview {
+  margin-top: 5px;
+  width: 100px;
+  height: 100px;
+  background: black;
+  border: 10px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+.Preview-board {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  width: 5vw;
+  height: 5vw;
+}
+
+.GameController {
   position: absolute;
-  z-index: 10;
-  width: 6px;
-  height: 6px;
-  left: -2px;
-  top: -2px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 4px 4px;
+  top: -100em;
 }
